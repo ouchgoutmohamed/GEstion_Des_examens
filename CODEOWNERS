@@ -1,0 +1,7 @@
+# Define code owners for specific directories or files
+# The following example assigns @username and @teamname as code owners for all files
+* @username @teamname
+
+# Assign different owners for specific directories
+/docs/ @docsteam
+/src/ @devteam
