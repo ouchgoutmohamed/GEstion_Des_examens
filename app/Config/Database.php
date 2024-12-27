@@ -28,7 +28,11 @@ class Database extends Config
         'DSN'          => '',
         'hostname'     => 'localhost',
         'username'     => 'root',
+<<<<<<< HEAD
         'password'     => env('database.default.password',''),
+=======
+        'password'     => '',
+>>>>>>> b5a64ab28af3902de160de973afc269bd4fc033c
         'database'     => 'gestion_examens',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
