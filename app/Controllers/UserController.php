@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
-class UserController extends Controller
+class UserController extends BaseController
 {
     /**
      * Affiche le formulaire d'inscription.
@@ -17,8 +17,22 @@ class UserController extends Controller
      */
     public function showRegistrationForm()
     {
-        return view('auth.register');
+        return view('signup');
     }
+
+    
+
+    /**
+     * Affiche le formulaire d'inscription.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function showLoginForm()
+    {
+        return view('login');
+    }
+
+
 
     /**
      * Gère une demande d'inscription.
@@ -30,8 +44,10 @@ class UserController extends Controller
     {
         // Validation des données
         $validator = Validator::make($request->all(), [
-            'name' => ['required', 'string', 'max:255'],
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'phone' => ['required', 'string', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
@@ -43,8 +59,10 @@ class UserController extends Controller
 
         // Création de l'utilisateur
         $user = User::create([
-            'name' => $request->name,
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
             'email' => $request->email,
+            'phone' => $request->phone,
             'password' => Hash::make($request->password),
         ]);
 

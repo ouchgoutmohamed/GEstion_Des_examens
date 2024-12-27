@@ -48,7 +48,7 @@
 
                             <div class="mb-4">
                                 <label class="block text-sm font-medium text-gray-600 dark:text-gray-200 mb-2" for="LoggingEmailAddress">Phone Number</label>
-                                <input name="phone" id="LoggingEmailAddress" class="form-input" type="email" placeholder="Enter your email" >
+                                <input name="phone" id="LoggingEmailAddress" class="form-input" type="phone" placeholder="Enter your email" >
                             </div>
 
                             <div class="mb-4">

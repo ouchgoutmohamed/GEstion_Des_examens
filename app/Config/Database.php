@@ -22,18 +22,23 @@ class Database extends Config
     /**
      * The default database connection.
      *
-     * @var array<string, mixed>
+     * @var array<string, mixed> $default
      */
     public array $default = [
         'DSN'          => '',
+        // 'hostname'     => env('database.default.hostname', 'localhost'),
+        // 'username'     => env('database.default.username', 'root'),
+        // 'password'     => env('database.default.password', ''),
+        // 'database'     => env('database.default.database', 'gestion_examens'),
+        // 'DBDriver'     => env('database.default.DBDriver', 'MySQLi'),
         'hostname'     => 'localhost',
         'username'     => 'root',
-        'password'     => env('database.default.password',''),
+        'password'     => 'password',
         'database'     => 'gestion_examens',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
-        'DBDebug'      => true,
+        'DBDebug'      => (ENVIRONMENT !== 'production'),
         'charset'      => 'utf8mb4',
         'DBCollat'     => 'utf8mb4_general_ci',
         'swapPre'      => '',

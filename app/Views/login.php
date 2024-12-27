@@ -7,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="public/assets/images/favicon.ico">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
 
     <!-- App css -->
-    <link href="public/assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css">
 
     <!-- Icons css -->
-    <link href="public/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
 
     <!-- Theme Config Js -->
-    <script src="public/assets/js/config.js"></script>
+    <script src="assets/js/config.js"></script>
 </head>
 
 <body>
