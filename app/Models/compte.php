@@ -1,14 +1,14 @@
 <?php
-class Compte {
+class Compte extends Model{
     // Attributs de la classe
     private $id_compte;
-    private $username;
+    private $email;
     private $password;
 
     // Constructeur pour initialiser les attributs
-    public function __construct($id_compte, $username, $password) {
+    public function __construct($id_compte, $usesrname, $password) {
         $this->id_compte = $id_compte;
-        $this->username = $username;
+        $this->email = $email;
         $this->password = $password;
     }
 
@@ -21,13 +21,13 @@ class Compte {
         $this->id_compte = $id_compte;
     }
 
-    // Getter et Setter pour l'attribut Username
-    public function getUsername() {
-        return $this->username;
+    // Getter et Setter pour l'attribut email
+    public function getemail() {
+        return $this->email;
     }
 
-    public function setUsername($username) {
-        $this->username = $username;
+    public function setemail($email) {
+        $this->email = $email;
     }
 
     // Getter et Setter pour l'attribut Password
@@ -42,7 +42,7 @@ class Compte {
     // Méthode pour afficher les informations du compte
     public function afficherDetails() {
         echo "ID Compte: " . $this->id_compte . "<br>";
-        echo "Username: " . $this->username . "<br>";
+        echo "email: " . $this->email . "<br>";
         echo "Password: " . $this->password . "<br>";
     }
 }
