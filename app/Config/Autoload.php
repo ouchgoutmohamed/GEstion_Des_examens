@@ -3,6 +3,7 @@
 namespace Config;
 
 use CodeIgniter\Config\AutoloadConfig;
+// Removed duplicate class definition and fixed base class
 
 /**
  * -------------------------------------------------------------------
@@ -20,8 +21,9 @@ use CodeIgniter\Config\AutoloadConfig;
  *
  * @immutable
  */
-class Autoload extends AutoloadConfig
+class Autoload extends AutoloadConfig 
 {
+     
     /**
      * -------------------------------------------------------------------
      * Namespaces
